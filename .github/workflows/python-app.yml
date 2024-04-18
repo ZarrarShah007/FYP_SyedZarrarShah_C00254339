@@ -33,4 +33,9 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Run Python script
       run: |
+        # Install Xvfb
+        sudo apt-get install xvfb
+        # Start Xvfb
+        Xvfb :99 -ac &
+        export DISPLAY=:99
         python app.py
