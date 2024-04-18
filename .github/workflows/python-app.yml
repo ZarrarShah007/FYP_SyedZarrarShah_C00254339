@@ -37,4 +37,5 @@ jobs:
     - name: Test with pytest
       run: |
         pip install PyYAML
+        pip install boto3
         python app.py
